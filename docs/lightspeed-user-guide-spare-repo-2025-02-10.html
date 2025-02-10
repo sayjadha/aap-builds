@@ -436,9 +436,224 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
 </head>
-<body class="article Role ARG Spec">
+<body class="article toc2 toc-left Role ARG Spec">
 <div id="header">
 <h1>Red Hat Ansible Lightspeed with IBM watsonx Code Assistant User Guide</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#making-open-source-more-inclusive">Making open source more inclusive</a></li>
+<li><a href="#lightspeed-intro">1. Introduction to Red Hat Ansible Lightspeed</a>
+<ul class="sectlevel2">
+<li><a href="#lightspeed-about_lightspeed-intro">1.1. About Red Hat Ansible Lightspeed</a>
+<ul class="sectlevel3">
+<li><a href="#_accessing_red_hat_ansible_lightspeed_with_ibm_watsonx_code_assistant">1.1.1. Accessing Red Hat Ansible Lightspeed with IBM watsonx Code Assistant</a></li>
+<li><a href="#_benefits_of_using_red_hat_ansible_lightspeed">1.1.2. Benefits of using Red Hat Ansible Lightspeed</a></li>
+</ul>
+</li>
+<li><a href="#lightspeed-key-features_lightspeed-intro">1.2. Key features of Red Hat Ansible Lightspeed</a></li>
+<li><a href="#lightspeed-process_lightspeed-intro">1.3. Using Red Hat Ansible Lightspeed with IBM watsonx Code Assistant</a>
+<ul class="sectlevel3">
+<li><a href="#_prerequisites">1.3.1. Prerequisites</a></li>
+<li><a href="#_connectivity_requirements">1.3.2. Connectivity requirements</a></li>
+</ul>
+</li>
+<li><a href="#training-data_lightspeed-intro">1.4. Data gathered to train the IBM watsonx Code Assistant models</a>
+<ul class="sectlevel3">
+<li><a href="#_models">1.4.1. Models</a></li>
+<li><a href="#_data_sources">1.4.2. Data sources</a></li>
+<li><a href="#_data_telemetry">1.4.3. Data telemetry</a></li>
+<li><a href="#telemetry-data-collection-notice_lightspeed-intro">1.4.4. Telemetry data collection notice for the Admin dashboard</a>
+<ul class="sectlevel4">
+<li><a href="#_what_information_does_red_hat_collect">What information does Red Hat collect?</a></li>
+<li><a href="#_personal_data">Personal Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#start-lightspeed-trial_lightspeed-user-guide">2. Starting a trial of Red Hat Ansible Lightspeed</a></li>
+<li><a href="#set-up-lightspeed_lightspeed-user-guide">3. Setting up Red Hat Ansible Lightspeed for your organization</a>
+<ul class="sectlevel2">
+<li><a href="#wca-key-model-id_set-up-lightspeed">3.1. Configuration requirements</a>
+<ul class="sectlevel3">
+<li><a href="#_licensing_requirements">3.1.1. Licensing requirements</a></li>
+<li><a href="#_setup_requirements">3.1.2. Setup requirements</a></li>
+</ul>
+</li>
+<li><a href="#configure-lightspeed-cloud-service_set-up-lightspeed">3.2. Setting up Red Hat Ansible Lightspeed cloud service</a>
+<ul class="sectlevel3">
+<li><a href="#log-in-administrator-portal_configure-lightspeed-cloud-service">3.2.1. Logging in to the Ansible Lightspeed administrator portal</a></li>
+<li><a href="#obtain-config-wca-and-model-id_configure-lightspeed-cloud-service">3.2.2. Configuring Red Hat Ansible Lightspeed cloud service</a></li>
+</ul>
+</li>
+<li><a href="#configuring-lightspeed-onpremise_set-up-lightspeed">3.3. Setting up Red Hat Ansible Lightspeed on-premise deployment</a>
+<ul class="sectlevel3">
+<li><a href="#overview-lightspeed-onpremise_configuring-lightspeed-onpremise">3.3.1. Overview</a>
+<ul class="sectlevel4">
+<li><a href="#_system_requirements">System requirements</a></li>
+<li><a href="#_prerequisites_2">Prerequisites</a></li>
+<li><a href="#_process_for_configuring_a_red_hat_ansible_lightspeed_on_premise_deployment">Process for configuring a Red Hat Ansible Lightspeed on-premise deployment</a></li>
+</ul>
+</li>
+<li><a href="#install-aap-lightspeed-operator_configuring-lightspeed-onpremise">3.3.2. Installing the Red Hat Ansible Automation Platform operator</a></li>
+<li><a href="#create-oauth-app_configuring-lightspeed-onpremise">3.3.3. Creating an OAuth application</a></li>
+<li><a href="#create-connection-secrets_configuring-lightspeed-onpremise">3.3.4. Creating connection secrets</a>
+<ul class="sectlevel4">
+<li><a href="#_creating_authorization_and_model_secrets">Creating authorization and model secrets</a></li>
+<li><a href="#_creating_a_bundle_secret_to_trust_a_custom_certificate_authority">Creating a bundle secret to trust a custom Certificate Authority</a></li>
+</ul>
+</li>
+<li><a href="#create-lightspeed-instance_configuring-lightspeed-onpremise">3.3.5. Creating and deploying a Red Hat Ansible Lightspeed instance</a></li>
+<li><a href="#update-redirect-uri_configuring-lightspeed-onpremise">3.3.6. Updating the Redirect URIs</a></li>
+<li><a href="#configure-vscode-extension-onpremise-deployment_configuring-lightspeed-onpremise">3.3.7. Configuring Ansible VS Code extension for Red Hat Ansible Lightspeed on-premise deployment</a></li>
+<li><a href="#update-connection-secrets_configuring-lightspeed-onpremise">3.3.8. Updating connection secrets on an existing Red Hat Ansible Automation Platform operator</a></li>
+<li><a href="#monitor-lightspeed-onpremise-deployment_configuring-lightspeed-onpremise">3.3.9. Monitoring your Red Hat Ansible Lightspeed on-premise deployment</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#developing-ansible-content_lightspeed-user-guide">4. Developing Ansible content</a>
+<ul class="sectlevel2">
+<li><a href="#log-into-portal-auto-dev_developing-ansible-content">4.1. Accessing the Ansible Lightspeed portal as an automation developer</a>
+<ul class="sectlevel3">
+<li><a href="#logging-into-portal-auto-dev_developing-ansible-content">4.1.1. Logging in to the Ansible Lightspeed portal as an automation developer</a></li>
+<li><a href="#_logging_out_of_the_ansible_lightspeed_service">4.1.2. Logging out of the Ansible Lightspeed Service</a></li>
+</ul>
+</li>
+<li><a href="#con-configure-vs-code-extension_developing-ansible-content">4.2. Installing and configuring the Ansible VS Code extension</a>
+<ul class="sectlevel3">
+<li><a href="#_connectivity_requirements_2">4.2.1. Connectivity requirements</a></li>
+<li><a href="#install-vscode-extension_developing-ansible-content">4.2.2. Installing the Ansible VS Code extension</a></li>
+<li><a href="#configure-vscode-extension_developing-ansible-content">4.2.3. Configuring the Ansible VS Code extension</a></li>
+<li><a href="#login-vscode-extension_developing-ansible-content">4.2.4. Logging in to Ansible Lightspeed through the Ansible VS Code extension</a>
+<ul class="sectlevel4">
+<li><a href="#_sign_in_options">Sign-in options</a></li>
+<li><a href="#_procedure">Procedure</a></li>
+</ul>
+</li>
+<li><a href="#log-out-of-portal_developing-ansible-content">4.2.5. Logging out of the Ansible Lightspeed Service</a></li>
+</ul>
+</li>
+<li><a href="#con-task-recommendations_developing-ansible-content">4.3. Creating task recommendations</a>
+<ul class="sectlevel3">
+<li><a href="#_best_practices_to_improve_the_recommended_guidance">4.3.1. Best practices to improve the recommended guidance</a></li>
+<li><a href="#single-task-recs_developing-ansible-content">4.3.2. Creating single task recommendations</a></li>
+<li><a href="#multi-task-recs_developing-ansible-content">4.3.3. Creating multitask recommendations</a></li>
+<li><a href="#view-training-matches_developing-ansible-content">4.3.4. Viewing the Ansible Lightspeed training matches</a></li>
+</ul>
+</li>
+<li><a href="#playbook-generation_developing-ansible-content">4.4. Creating playbooks and viewing playbook explanations</a>
+<ul class="sectlevel3">
+<li><a href="#_best_practices_to_create_playbooks">4.4.1. Best practices to create playbooks</a></li>
+<li><a href="#generate-playbook_developing-ansible-content">4.4.2. Generating Ansible playbooks</a></li>
+<li><a href="#view-playbook-explanation_developing-ansible-content">4.4.3. Viewing the playbook explanations</a></li>
+</ul>
+</li>
+<li><a href="#provide-feedback_developing-ansible-content">4.5. Providing feedback on the Ansible Lightspeed service</a></li>
+</ul>
+</li>
+<li><a href="#administering-ansible-lightspeed_lightspeed-user-guide">5. Administering the Ansible Lightspeed Service</a>
+<ul class="sectlevel2">
+<li><a href="#log-in-administrator-portal_administering-ansible-lightspeed">5.1. Logging in to the Ansible Lightspeed administrator portal</a>
+<ul class="sectlevel3">
+<li><a href="#log-out-of-portal_administering-ansible-lightspeed">5.1.1. Logging out of the Ansible Lightspeed Service</a></li>
+</ul>
+</li>
+<li><a href="#view-manage-admin-dashboard-telemetry_administering-ansible-lightspeed">5.2. Viewing and managing the Admin dashboard telemetry</a>
+<ul class="sectlevel3">
+<li><a href="#_prerequisites_3">5.2.1. Prerequisites</a></li>
+<li><a href="#_what_telemetry_data_is_collected">5.2.2. What telemetry data is collected?</a></li>
+<li><a href="#view-admin-dashboard_administering-ansible-lightspeed">5.2.3. Viewing the Admin dashboard telemetry</a></li>
+<li><a href="#disable-admin-dashboard-telemetry_administering-ansible-lightspeed">5.2.4. Disabling the Admin dashboard telemetry</a></li>
+</ul>
+</li>
+<li><a href="#configure-custom-models_administering-ansible-lightspeed">5.3. Configuring custom models</a>
+<ul class="sectlevel3">
+<li><a href="#_process_for_configuring_custom_models">5.3.1. Process for configuring custom models</a></li>
+<li><a href="#ansible-content-parser_administering-ansible-lightspeed">5.3.2. Creating a training data set by using the content parser tool</a>
+<ul class="sectlevel4">
+<li><a href="#_methods_of_creating_training_data_sets">Methods of creating training data sets</a></li>
+<li><a href="#_supported_data_sources">Supported data sources</a></li>
+<li><a href="#_process_of_creating_a_training_data_set">Process of creating a training data set</a></li>
+<li><a href="#install-content-parser_administering-ansible-lightspeed">Installing the content parser tool</a></li>
+<li><a href="#generate-training-data-set_administering-ansible-lightspeed">Generating a custom model training data set</a></li>
+<li><a href="#view-content-parser-output_administering-ansible-lightspeed">Viewing the generated training data set</a></li>
+<li><a href="#resolve-ansible-lint-rule-violations_administering-ansible-lightspeed">Resolving ansible-lint rule violations</a></li>
+<li><a href="#merge-multiple-jsonl-files_administering-ansible-lightspeed">Merging multiple training data sets into a single file</a></li>
+</ul>
+</li>
+<li><a href="#create-deploy-custom-model-ibm_administering-ansible-lightspeed">5.3.3. Creating and deploying a custom model in IBM watsonx Code Assistant</a></li>
+<li><a href="#configure-custom-models-lightspeed_administering-ansible-lightspeed">5.3.4. Configuring Red Hat Ansible Lightspeed to use custom models</a>
+<ul class="sectlevel4">
+<li><a href="#_configuring_the_custom_model_for_all_ansible_users_in_your_organization">Configuring the custom model for all Ansible users in your organization</a></li>
+<li><a href="#_configuring_the_custom_model_for_select_ansible_users_in_your_organization">Configuring the custom model for select Ansible users in your organization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#using-code-bot-for-suggestions_lightspeed-user-guide">6. Installing and configuring the Ansible code bot</a>
+<ul class="sectlevel2">
+<li><a href="#install-code-bot_using-code-bot-for-suggestions">6.1. Installing the Ansible code bot</a>
+<ul class="sectlevel3">
+<li><a href="#_post_installation_tasks">6.1.1. Post-installation tasks</a></li>
+<li><a href="#_uninstalling_the_ansible_code_bot">6.1.2. Uninstalling the Ansible code bot</a></li>
+</ul>
+</li>
+<li><a href="#manage-repo-scans_using-code-bot-for-suggestions">6.2. Managing repository scans</a>
+<ul class="sectlevel3">
+<li><a href="#manually-scan-repo_using-code-bot-for-suggestions">6.2.1. Manually scanning your Git repositories</a>
+<ul class="sectlevel4">
+<li><a href="#_manually_scanning_the_repository_from_the_ansible_code_bot_dashboard">Manually scanning the repository from the Ansible code bot  dashboard</a></li>
+<li><a href="#_manually_scanning_the_repository_from_github">Manually scanning the repository from GitHub</a></li>
+</ul>
+</li>
+<li><a href="#configure-repo-scan_using-code-bot-for-suggestions">6.2.2. Configuring the Ansible code bot to scan your repository at regular intervals</a></li>
+<li><a href="#view-repo-scan-history_using-code-bot-for-suggestions">6.2.3. Viewing your repository&#8217;s scan history</a></li>
+<li><a href="#add-remove-repo-from-scans_using-code-bot-for-suggestions">6.2.4. Adding or removing repositories from the Ansible code bot</a></li>
+</ul>
+</li>
+<li><a href="#ansible-code-bot-duplicate-pr">6.3. How Ansible code bot handles duplicate pull requests</a></li>
+</ul>
+</li>
+<li><a href="#troubleshooting-lightspeed_lightspeed-user-guide">7. Troubleshooting</a>
+<ul class="sectlevel2">
+<li><a href="#troubleshooting-lightspeed-config_troubleshooting-lightspeed">7.1. Troubleshooting Red Hat Ansible Lightspeed configuration errors</a>
+<ul class="sectlevel3">
+<li><a href="#_cannot_access_the_ansible_lightspeed_administrator_portal">7.1.1. Cannot access the Ansible Lightspeed administrator portal</a></li>
+<li><a href="#_cannot_save_the_api_key">7.1.2. Cannot save the API key</a></li>
+<li><a href="#_cannot_configure_the_model_id_due_to_authentication_failure">7.1.3. Cannot configure the model ID due to authentication failure</a></li>
+<li><a href="#_cannot_configure_the_model_id_due_to_inference_failure">7.1.4. Cannot configure the model ID due to inference failure</a></li>
+</ul>
+</li>
+<li><a href="#troubleshooting-lightspeed-onpremise-config_troubleshooting-lightspeed">7.2. Troubleshooting Red Hat Ansible Lightspeed on-premise deployment errors</a>
+<ul class="sectlevel3">
+<li><a href="#_cannot_log_in_to_the_ansible_lightspeed_portal">7.2.1. Cannot log in to the Ansible Lightspeed portal</a></li>
+<li><a href="#_cannot_log_out_of_the_ansible_lightspeed_portal">7.2.2. Cannot log out of the Ansible Lightspeed portal</a></li>
+<li><a href="#_cannot_connect_to_the_ansible_lightspeed_service_from_the_ansible_vs_code_extension">7.2.3. Cannot connect to the Ansible Lightspeed service from the Ansible VS Code extension</a></li>
+<li><a href="#_cannot_connect_to_the_ansible_lightspeed_service_due_to_ssl_connection_error">7.2.4. Cannot connect to the Ansible Lightspeed service due to SSL connection error</a></li>
+</ul>
+</li>
+<li><a href="#troubleshooting-vscode_troubleshooting-lightspeed">7.3. Troubleshooting Ansible Visual Studio Code extension errors</a>
+<ul class="sectlevel3">
+<li><a href="#_cannot_view_the_generated_code_recommendations_using_the_ansible_vs_code_extension">7.3.1. Cannot view the generated code recommendations using the Ansible VS Code extension</a></li>
+<li><a href="#_cannot_request_code_recommendations_by_using_the_ansible_vs_code_extension">7.3.2. Cannot request code recommendations by using the Ansible VS Code extension</a></li>
+</ul>
+</li>
+<li><a href="#troubleshooting-code-bot_troubleshooting-lightspeed">7.4. Troubleshooting Ansible code bot errors</a>
+<ul class="sectlevel3">
+<li><a href="#_cannot_access_ansible_code_bot">7.4.1. Cannot access Ansible code bot</a></li>
+<li><a href="#_cannot_scan_your_git_repository_using_ansible_code_bot">7.4.2. Cannot scan your Git repository using Ansible code bot</a></li>
+<li><a href="#_cannot_create_pull_requests">7.4.3. Cannot create pull requests</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 <div id="content">
 <div class="sect1">

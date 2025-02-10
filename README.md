@@ -7,3 +7,4 @@ Preview links:
 * https://sayjadha.github.io/aap-builds/lightspeed-user-guide-spare-repo-2025-02-10.html
 
 
+* https://sayjadha.github.io/aap-builds/lightspeed-user-guide-spare-repo-2025-02-10.html
